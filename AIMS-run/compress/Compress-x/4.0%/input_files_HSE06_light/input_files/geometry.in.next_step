@@ -1,0 +1,23 @@
+# 
+# This is the geometry file that corresponds to the current relaxation step.
+# If you do not want this file to be written, set the "write_restart_geometry" flag to .false.
+#  aims_uuid : 36081117-28A2-4825-A736-4B6A2172ECAA                                
+# 
+lattice_vector      3.58579099      0.00000002     -0.00000554
+  constrain_relaxation .true.
+lattice_vector     -0.00000003      4.56008681      0.00000003
+lattice_vector      0.00000000      0.00000000     40.26250673
+  constrain_relaxation .true.
+atom_frac       0.80511633      0.84042454      0.49999911 C
+atom_frac       0.19486160      0.15957603      0.49999911 C
+atom_frac       0.80511633      0.15957603      0.49999911 C
+atom_frac       0.19486159      0.84042454      0.49999911 C
+atom_frac       0.49998896      0.65737827      0.49999911 C
+atom_frac       0.49998896      0.34262230      0.49999911 C
+# 
+# What follows is the current estimated Hessian matrix constructed by the BFGS algorithm.
+# This is NOT the true Hessian matrix of the system.
+# If you do not want this information here, switch it off using the "hessian_to_restart_geometry" keyword.
+# 
+trust_radius             0.2000000030
+hessian_file
