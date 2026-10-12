@@ -16,9 +16,22 @@ In the context of carbon material science, a deformation in the x x-axis means a
     └──compress               #Directory for 2D sheet compression
     └──figures                #Figures generated from the analysis notebook
     └──nanotubes              #Directory for nanotube strain and compressions
-    └──ribbons                #Directory for nanoribbon strain and compressions
+       └──armchair            #Directory for deformations of armchair-chiral nanotubes
+          └──compress         #Directory for nanotube compressions
+          └──strain           #Directory for nanotube strain
+       └──zigzag              #Directory for deformations of zigzag-chiral nanotubes
+          └──compress         #Directory for nanotube compressions
+          └──strain           #Directory for nanotube strain
+    └──ribbons                #Directory for nanoribbon strain and compression
+       └──armchair            #Directory for deformations of armchair-chiral nanoribbons
+          └──compress         #Directory for nanoribbon compressions
+          └──strain           #Directory for nanoribbon strain
+       └──zigzag              #Directory for deformations of zigzag-chiral nanoribbon
+          └──compress         #Directory for nanoribbon compressions
+          └──strain           #Directory for nanoribbon strain
     └──strain                 #Directory for 2D sheet strain
 └── README.md                   # This file/
 ```
 
 ---
+
