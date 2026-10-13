@@ -43,3 +43,32 @@ In the context of carbon material science, a deformation in the x x-axis means a
 
 ---
 
+## 🔁Strain and Compression Workflow
+
+The main focus of the research workflow is to run the aims-strain.py or aims-compress.py python scripts. These scripts are built to:
+1-Run a geometry optimization for the undeformed material in the PBE-GGA level of theory;
+2-Run one more geometry optimization step in the HSE06 level of theory;
+3-Perform band structure calculations in the HSE06 level of theory;
+4-Update the lattice parameter that is being deformed:
+    -If strain: Lattice parameter is increased by 1% of its original value;
+    -If compression: Lattice parameter is decreased by 1% of its original value;
+5-Restart the loop with new lattice parameter fixed (so the material does not return tu original size).
+
+## ⚛️ FHI-aims Calculation protocol
+
+The workflow is projected to perform calculations using the FHI-aims software in increasing levels of accuracy. Input folders were generated using FHI-aims GIMS graphical interface for the generation of atomic defaults for carbon and, in the case of nanoribbons, hydrogen atoms. Input structures consist of increasing degrees of accuracy as instructed in FHI-aims GIMS "Simple calculation" and "Band Structure" apps. 
+
+Python script follows the following steps for calculations:
+1- Geomtery optimization in the light setting for species defaults (PBE-GGA);
+2- Geomtery optimization in the intermediate setting for species defaults (PBE-GGA);
+3- Geomtery optimization in the tight setting for species defaults (PBE-GGA);
+4- Geomtery optimization in the really_tight setting for species defaults (PBE-GGA);
+5- Geomtery optimization in the light setting for species defaults (HSE06);
+    *For every new geometry optimization step, the geometry obtained from the previous step is copied and used as the strating configuration for the current calculation;
+6- Band structure and DOS calculation in the intermediate setting for species defaults (HSE06);
+    *In the case of the 2D BPN sheet, electronic structure is calculated in the tight setting (HSE06 functional) due to low system size.
+7- Lattice parameter is increased/decreased and set to fixed (argument constrain_relaxation .true. is used in the lattice parameter that is being deformed)
+8- Workflow starts again from item 1.
+
+
+Species settings (light --> really_tight) differ in the deffinition of the basis function. In the light settings, the first tier set of basis function is used. With increased level of accuracy in the intermediate, tight and really_tight settings, more basis functions are added to the minimal set.
