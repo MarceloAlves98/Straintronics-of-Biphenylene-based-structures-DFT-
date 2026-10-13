@@ -12,7 +12,7 @@ In the context of carbon material science, a deformation in the x x-axis means a
 
 ```bash
 .
-├── AIMS-run/                 #Main directory: contains the calculations made with FHI-aims and figures used in the thesis
+├── AIMS-run/                 #Main directory: contains the main research workflow with the calculations made with FHI-aims and figures used in the thesis
     └──compress               #Directory for 2D sheet compression
        └──Compress-x          #Directory for 2D-sheet compression in the zigzag (x-axis) direction
        └──Compress-y          #Directory for 2D-sheet compression in the armchair (y-axis) direction
@@ -32,8 +32,12 @@ In the context of carbon material science, a deformation in the x x-axis means a
           └──compress         #Directory for nanoribbon compressions
           └──strain           #Directory for nanoribbon strain
     └──strain                 #Directory for 2D sheet strain
-       └──Strain-x          #Directory for 2D-sheet Strain in the zigzag (x-axis) direction
-       └──Strain-y          #Directory for 2D-sheet Strain in the armchair (y-axis) direction
+       └──Strain-x            #Directory for 2D-sheet Strain in the zigzag (x-axis) direction
+       └──Strain-y            #Directory for 2D-sheet Strain in the armchair (y-axis) direction
+├──Qualificação               #Main folder containing every file necessary to generate the current state of the Thesis text
+   └──figuras-vmd             #Figures generated using VMD
+   └──Qualificação.zip        #Self-contained LaTeX project, ready for direct implementation in Overleaf
+   └──text and presentations  #Directory containing finished text and presentation for Qaulification exam
 └── README.md                   # This file/
 ```
 
