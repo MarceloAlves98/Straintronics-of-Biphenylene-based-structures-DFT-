@@ -70,5 +70,6 @@ Python script follows the following steps for calculations:
 7- Lattice parameter is increased/decreased and set to fixed (argument constrain_relaxation .true. is used in the lattice parameter that is being deformed)
 8- Workflow starts again from item 1.
 
+![image info](Straintronics-of-Biphenylene-based-structures-DFT-/Qualificação/text and presentations/workflow.png)
 
 Species settings (light --> really_tight) differ in the deffinition of the basis function. In the light settings, the first tier set of basis function is used. With increased level of accuracy in the intermediate, tight and really_tight settings, more basis functions are added to the minimal set.
