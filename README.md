@@ -161,9 +161,10 @@ This notebook generates the following Figures:
 </p>
 
 4-Band structure from 0% until 14% deformation for:
+
 4.1-Armchair and zigzag strain for the 2D sheet:
 <p align="center">
-  <img src="./AIMS-run/figures/figuras_quali/sheet/zigzag/bands_strain_armchair.png" width="900">
+  <img src="./AIMS-run/figures/figuras_quali/sheet/bands_strain_armchair.png" width="900">
 </p>
 
 <p align="center">
@@ -171,7 +172,7 @@ This notebook generates the following Figures:
 </p>
 
 <p align="center">
-  <img src="./AIMS-run/figures/figuras_quali/ribbon/zigzag/bands_strain_zigzag.png" width="900">
+  <img src="./AIMS-run/figures/figuras_quali/sheet/bands_strain_zigzag.png" width="900">
 </p>
 
 <p align="center">
@@ -180,7 +181,7 @@ This notebook generates the following Figures:
 
 4.2-Armchair and zigzag compression for the 2D sheet:
 <p align="center">
-  <img src="./AIMS-run/figures/figuras_quali/sheet/zigzag/bands_compress_armchair.png" width="900">
+  <img src="./AIMS-run/figures/figuras_quali/sheet/bands_compress_armchair.png" width="900">
 </p>
 
 <p align="center">
@@ -188,7 +189,7 @@ This notebook generates the following Figures:
 </p>
 
 <p align="center">
-  <img src="./AIMS-run/figures/figuras_quali/ribbon/zigzag/bands_compress_zigzag.png" width="900">
+  <img src="./AIMS-run/figures/figuras_quali/sheet/bands_compress_zigzag.png" width="900">
 </p>
 
 <p align="center">
@@ -205,7 +206,7 @@ This notebook generates the following Figures:
 </p>
 
 <p align="center">
-  <img src="./AIMS-run/figures/figuras_quali/ribbon/armchair/bands_tube_compress_armchair.png" width="900">
+  <img src="./AIMS-run/figures/figuras_quali/tube/armchair/bands_tube_compress_armchair.png" width="900">
 </p>
 
 <p align="center">
@@ -229,24 +230,24 @@ This notebook generates the following Figures:
   <em>Figure 1. Compression on zigzag nanotube.</em>
 </p>
 
-4.5-Strain and compression for Armchair nanotube:
+4.5-Strain and compression for Armchair ribbon:
 <p align="center">
-  <img src="./AIMS-run/figures/figuras_quali/tube/armchair/bands_ribbon_strain_armchair.png" width="900">
+  <img src="./AIMS-run/figures/figuras_quali/ribbon/armchair/bands_ribbon_strain_armchair.png" width="900">
 </p>
 
 <p align="center">
-  <em>Figure 1. Strain on armchair ribbon</em>
+  <em>Figure 1. Strain on armchair nanoribbon.</em>
 </p>
 
 <p align="center">
-  <img src="./AIMS-run/figures/figuras_quali/tube/armchair/bands_tube_compress_armchair.png" width="900">
+  <img src="./AIMS-run/figures/figuras_quali/ribbon/armchair/bands_ribbon_compress_armchair.png" width="900">
 </p>
 
 <p align="center">
-  <em>Figure 1. Compression on armchair nanotube.</em>
+  <em>Figure 1. Compression on armchair nanoribbon.</em>
 </p>
 
-4.4-Strain and compression for Zigzag nanotube:
+4.6-Strain and compression for Zigzag nanoribbon:
 <p align="center">
   <img src="./AIMS-run/figures/figuras_quali/ribbon/zigzag/bands_ribbon_strain_zigzag.png" width="900">
 </p>
@@ -263,7 +264,36 @@ This notebook generates the following Figures:
   <em>Figure 1. Compression on zigzag ribbon.</em>
 </p>
 
-5-Some specific cases of interest that are specified in the Results section in the thesis.
+5-Dimensionality reduction effects (Comparisson):
+
+5.1-Armchair chirality:
+
+<p align="center">
+  <img src="./AIMS-run/figures/figuras_quali/bands_dimension_reduction_armchair.png" width="900">
+</p>
+
+<p align="center">
+  <em>Figure 1. Dimensionality reduction for the armchair materials.</em>
+</p>
+
+5.2-Zigzag chirality:
+
+<p align="center">
+  <img src="./AIMS-run/figures/figuras_quali/bands_dimension_reduction_zigzag.png" width="900">
+</p>
+
+<p align="center">
+  <em>Figure 1. Dimensionality reduction for the zigzag materials.</em>
+</p>
+
+6-Some specific cases of interest that are specified in the Results section in the thesis, for example:
+<p align="center">
+  <img src="./AIMS-run/figures/figuras_quali/tube/zigzag/bands_12_tube_zigzag.png" width="900">
+</p>
+
+<p align="center">
+  <em>Figure 1. Possible transition into semimetal observed for 12% compression on zigzag nanotube.</em>
+</p>
 
 ## 🔜 Future Steps
 Some calculations are still to be made:
