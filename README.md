@@ -110,15 +110,160 @@ For each of the deformation direction folders, a simple python3 call will run th
 When the script is called, it creates folders for each deformation step with a Z% name, in which Z is the percentage of deformation. The 0% folder is the initial stage, and therefore must already be in the directory when aims-deform-direction.py. After being called, the script will start performing the loop present in Figure 1 for 0%. It will then copy 0% into a folder called 1%, therefore finishing the first loop. The current deformation is made until 20% is reached, even though results in the thesis are presented only until 14% deformation, which were the most "Interesting" results obtained so far.
 
 ## 📊 Results
-After simulations are concluded, the figures containing the electronic structure analysis can be generated in the jupyter notebook called bands.ipynb, which is located in the AIMS-run/figures/figuras_quali/ folder.
+After simulations are concluded, the figures containing the electronic structure analysis can be generated in the jupyter notebook called bands_turbo.ipynb, which is located in the AIMS-run/figures/figuras_quali/ folder.
 
 This notebook generates the following Figures:
 
-1-Band structure + DOS for the relaxed geometries of 2D sheet, Armchair and Zigzag Nanotubes, Armchair and Zigzag Nanoribbons;
+1-Band structure + DOS for the relaxed geometry of 2D sheet:
 
-2-Band structure from 0% until 14% deformation for all geometries and deformation directions;
+<p align="center">
+  <img src="./AIMS-run/figures/figuras_quali/sheet/bands_0_unitcell.png" width="900">
+</p>
 
-3-Some specific cases of interest that are specified in the Results section in the thesis.
+<p align="center">
+  <em>Figure 1. Band structure and DOS of 2D sheet.</em>
+</p>
+
+2-Band structure + DOS for the relaxed geometries of Armchair and Zigzag Nanotubes:
+
+<p align="center">
+  <img src="./AIMS-run/figures/figuras_quali/tube/armchair/bands_0_tube_armchair.png" width="900">
+</p>
+
+<p align="center">
+  <em>Figure 1. Band structure and DOS of armchair nanotube.</em>
+</p>
+
+<p align="center">
+  <img src="./AIMS-run/figures/figuras_quali/tube/zigzag/bands_0_tube_zigzag.png" width="900">
+</p>
+
+<p align="center">
+  <em>Figure 1. Band structure and DOS of zigzag nanotube.</em>
+</p>
+
+3-Band structure + DOS for the relaxed geometries of Armchair and Zigzag Nanoribbons:
+
+<p align="center">
+  <img src="./AIMS-run/figures/figuras_quali/ribbon/armchair/bands_0_ribbon_armchair.png" width="900">
+</p>
+
+<p align="center">
+  <em>Figure 1. Band structure and DOS of armchair nanoribbon.</em>
+</p>
+
+<p align="center">
+  <img src="./AIMS-run/figures/figuras_quali/ribbon/zigzag/bands_0_ribbon_zigzag.png" width="900">
+</p>
+
+<p align="center">
+  <em>Figure 1. Band structure and DOS of zigzag nanoribbon.</em>
+</p>
+
+4-Band structure from 0% until 14% deformation for:
+4.1-Armchair and zigzag strain for the 2D sheet:
+<p align="center">
+  <img src="./AIMS-run/figures/figuras_quali/sheet/zigzag/bands_strain_armchair.png" width="900">
+</p>
+
+<p align="center">
+  <em>Figure 1. Armchair strain for 2D sheet.</em>
+</p>
+
+<p align="center">
+  <img src="./AIMS-run/figures/figuras_quali/ribbon/zigzag/bands_strain_zigzag.png" width="900">
+</p>
+
+<p align="center">
+  <em>Figure 1. Zigzag strain for the 2D sheet.</em>
+</p>
+
+4.2-Armchair and zigzag compression for the 2D sheet:
+<p align="center">
+  <img src="./AIMS-run/figures/figuras_quali/sheet/zigzag/bands_compress_armchair.png" width="900">
+</p>
+
+<p align="center">
+  <em>Figure 1. Armchair compression for 2D sheet.</em>
+</p>
+
+<p align="center">
+  <img src="./AIMS-run/figures/figuras_quali/ribbon/zigzag/bands_compress_zigzag.png" width="900">
+</p>
+
+<p align="center">
+  <em>Figure 1. Zigzag compression for the 2D sheet.</em>
+</p>
+
+4.3-Strain and compression for Armchair nanotube:
+<p align="center">
+  <img src="./AIMS-run/figures/figuras_quali/tube/armchair/bands_tube_strain_armchair.png" width="900">
+</p>
+
+<p align="center">
+  <em>Figure 1. Strain on armchair nanotube.</em>
+</p>
+
+<p align="center">
+  <img src="./AIMS-run/figures/figuras_quali/ribbon/armchair/bands_tube_compress_armchair.png" width="900">
+</p>
+
+<p align="center">
+  <em>Figure 1. Compression on armchair nanotube.</em>
+</p>
+
+4.4-Strain and compression for Zigzag nanotube:
+<p align="center">
+  <img src="./AIMS-run/figures/figuras_quali/tube/zigzag/bands_tube_strain_zigzag.png" width="900">
+</p>
+
+<p align="center">
+  <em>Figure 1. Strain on zigzag nanotube.</em>
+</p>
+
+<p align="center">
+  <img src="./AIMS-run/figures/figuras_quali/tube/zigzag/bands_tube_compress_zigzag.png" width="900">
+</p>
+
+<p align="center">
+  <em>Figure 1. Compression on zigzag nanotube.</em>
+</p>
+
+4.5-Strain and compression for Armchair nanotube:
+<p align="center">
+  <img src="./AIMS-run/figures/figuras_quali/tube/armchair/bands_ribbon_strain_armchair.png" width="900">
+</p>
+
+<p align="center">
+  <em>Figure 1. Strain on armchair ribbon</em>
+</p>
+
+<p align="center">
+  <img src="./AIMS-run/figures/figuras_quali/tube/armchair/bands_tube_compress_armchair.png" width="900">
+</p>
+
+<p align="center">
+  <em>Figure 1. Compression on armchair nanotube.</em>
+</p>
+
+4.4-Strain and compression for Zigzag nanotube:
+<p align="center">
+  <img src="./AIMS-run/figures/figuras_quali/ribbon/zigzag/bands_ribbon_strain_zigzag.png" width="900">
+</p>
+
+<p align="center">
+  <em>Figure 1. Strain on zigzag ribbon.</em>
+</p>
+
+<p align="center">
+  <img src="./AIMS-run/figures/figuras_quali/ribbon/zigzag/bands_ribbon_compress_zigzag.png" width="900">
+</p>
+
+<p align="center">
+  <em>Figure 1. Compression on zigzag ribbon.</em>
+</p>
+
+5-Some specific cases of interest that are specified in the Results section in the thesis.
 
 ## 🔜 Future Steps
 Some calculations are still to be made:
