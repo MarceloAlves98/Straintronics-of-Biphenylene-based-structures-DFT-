@@ -4,11 +4,11 @@
 #  aims_uuid : C4542134-171F-4DC6-A016-A955054C0CF5                                
 # 
 lattice_vector     55.11782964      0.00000000      0.00000000
-  constrain_relaxation .true.
+  # constrain_relaxation .true.
 lattice_vector     -0.02035906     55.11765158      0.00000000
-  constrain_relaxation .true.
+  # constrain_relaxation .true.
 lattice_vector     -0.00236335     -0.00053431      3.90335655
-  constrain_relaxation .true.
+  # constrain_relaxation .true.
 atom_frac       0.59135435      0.54822745      0.80481975 C
 atom_frac       0.58411194      0.56060917      0.50083250 C
 atom_frac       0.60319946      0.50994521      0.50089816 C

@@ -19,4 +19,4 @@ module load intel
 module load mpi
 module load python
 
-/opt/anaconda3/2023.07/bin/python3 -u aims-strain-armchair.py
+/opt/anaconda3/2023.07/bin/python3 -u aims-compress-armchair.py

@@ -1,0 +1,781 @@
+------------------------------------------------------------
+          Invoking FHI-aims ...
+
+          When using FHI-aims, please cite the following reference:
+
+            Volker Blum, Ralf Gehrke, Felix Hanke, Paula Havu,
+            Ville Havu, Xinguo Ren, Karsten Reuter, and Matthias Scheffler,
+            'Ab Initio Molecular Simulations with Numeric Atom-Centered Orbitals',
+            Computer Physics Communications 180, 2175-2196 (2009)
+
+          In addition, many other developments in FHI-aims are likely important for
+          your particular application. A partial list of references is given at the end of
+          this file. Thank you for giving credit to the authors of these developments.
+
+          For any questions about FHI-aims, please visit our slack channel at
+
+            https://fhi-aims.slack.com
+
+          and our main development and support site at
+
+            https://aims-git.rz-berlin.mpg.de .
+
+          The latter site, in particular, has a wiki to collect information, as well
+          as an issue tracker to log discussions, suggest improvements, and report issues
+          or bugs. https://aims-git.rz-berlin.mpg.de is also the main development site
+          of the project and all new and updated code versions can be obtained there.
+          Please send an email to aims-coordinators@fhi-berlin.mpg.de and we will add
+          you to these sites. They are for you and everyone is welcome there.
+
+------------------------------------------------------------
+
+
+
+  Date     :  20250930, Time     :  232136.032
+  Time zero on CPU 1             :   0.124744500000000E+01  s.
+  Internal wall clock time zero  :           528506496.032  s.
+
+  FHI-aims created a unique identifier for this run for later identification
+  aims_uuid : A8355A52-A438-40D3-A808-8DD76A8F67F7
+
+  Build configuration of the current instance of FHI-aims
+  -------------------------------------------------------
+  FHI-aims version      : 220429
+  Commit number         : 1a4f1d7ce
+  CMake host system     : Linux-4.18.0-477.10.1.el8_8.x86_64
+  CMake version         : 3.24.2
+  Fortran compiler      : /opt/intel/oneapi/mpi/2021.9.0/bin/mpiifort (Intel) version 2021.9.0.20230302
+  Fortran compiler flags: -O3 -ip -fp-model precise
+  C compiler            : /opt/intel/oneapi/compiler/2023.1.0/linux/bin/intel64/icc (Intel) version 2021.9.0.20230302
+  C compiler flags      : -O3 -ip -fp-model precise -std=gnu99
+  Using MPI
+  Using ScaLAPACK
+  Using LibXC
+  Using i-PI
+  Using RLSY
+  Linking against: /opt/intel/oneapi/mkl/2023.1.0/lib/intel64/libmkl_scalapack_lp64.so
+                   /opt/intel/oneapi/mkl/2023.1.0/lib/intel64/libmkl_blacs_intelmpi_lp64.so
+                   /opt/intel/oneapi/mkl/2023.1.0/lib/intel64/libmkl_intel_lp64.so
+                   /opt/intel/oneapi/mkl/2023.1.0/lib/intel64/libmkl_sequential.so
+                   /opt/intel/oneapi/mkl/2023.1.0/lib/intel64/libmkl_core.so
+
+  Using       44 parallel tasks.
+  Task        0 on host r1n23 reporting.
+  Task        1 on host r1n23 reporting.
+  Task        2 on host r1n23 reporting.
+  Task        3 on host r1n23 reporting.
+  Task        4 on host r1n23 reporting.
+  Task        5 on host r1n23 reporting.
+  Task        6 on host r1n23 reporting.
+  Task        7 on host r1n23 reporting.
+  Task        8 on host r1n23 reporting.
+  Task        9 on host r1n23 reporting.
+  Task       10 on host r1n23 reporting.
+  Task       11 on host r1n23 reporting.
+  Task       12 on host r1n23 reporting.
+  Task       13 on host r1n23 reporting.
+  Task       14 on host r1n23 reporting.
+  Task       15 on host r1n23 reporting.
+  Task       16 on host r1n23 reporting.
+  Task       17 on host r1n23 reporting.
+  Task       18 on host r1n23 reporting.
+  Task       19 on host r1n23 reporting.
+  Task       20 on host r1n23 reporting.
+  Task       21 on host r1n23 reporting.
+  Task       22 on host r1n23 reporting.
+  Task       23 on host r1n23 reporting.
+  Task       24 on host r1n23 reporting.
+  Task       25 on host r1n23 reporting.
+  Task       26 on host r1n23 reporting.
+  Task       27 on host r1n23 reporting.
+  Task       28 on host r1n23 reporting.
+  Task       29 on host r1n23 reporting.
+  Task       30 on host r1n23 reporting.
+  Task       31 on host r1n23 reporting.
+  Task       32 on host r1n23 reporting.
+  Task       33 on host r1n23 reporting.
+  Task       34 on host r1n23 reporting.
+  Task       35 on host r1n23 reporting.
+  Task       36 on host r1n23 reporting.
+  Task       37 on host r1n23 reporting.
+  Task       38 on host r1n23 reporting.
+  Task       39 on host r1n23 reporting.
+  Task       40 on host r1n23 reporting.
+  Task       41 on host r1n23 reporting.
+  Task       42 on host r1n23 reporting.
+  Task       43 on host r1n23 reporting.
+
+  Performing system and environment tests:
+  | Environment variable OMP_NUM_THREADS correctly set to 1.
+  | Checking for ScaLAPACK...
+  | Testing pdtran()...
+  | All pdtran() tests passed.
+
+  Obtaining array dimensions for all initial allocations:
+  
+  -----------------------------------------------------------------------
+  Parsing control.in (first pass over file, find array dimensions only).
+  The contents of control.in will be repeated verbatim below
+  unless switched off by setting 'verbatim_writeout .false.' .
+  in the first line of control.in .
+  -----------------------------------------------------------------------
+  
+  #===============================================================================
+  # FHI-aims file: /tmp/tmptd_gfjsr/tar/input_files/control.in
+  # Created using the Atomic Simulation Environment (ASE)
+  # Fri Sep 26 18:54:13 2025
+  #===============================================================================
+  xc                                 hse06 0.11
+  hse_unit                           bohr
+  hybrid_xc_coeff                    0.25
+  k_grid                             1 1 24
+  output                             band   0.00000  0.00000 -0.50000   0.00000  0.00000  0.00000   42 X  G
+  output                             band   0.00000  0.00000  0.00000   0.00000  0.50000  0.00000    3 G  Y
+  output                             band   0.00000  0.50000 -0.50000   0.00000  0.00000  0.00000   42 L  G
+  output                             band   0.00000  0.00000  0.00000   0.50000 -0.50000  0.00000    4 G  Z
+  output                             band   0.50000 -0.50000 -0.50000   0.00000  0.00000  0.00000   42 N  G
+  output                             band   0.00000  0.00000  0.00000   0.50000  0.00000  0.00000    3 G  M
+  output                             band   0.50000  0.00000 -0.50000   0.00000  0.00000  0.00000   42 R  G
+  output dos                         -30 30 10000 0.025
+  output                             hirshfeld
+  output                             mulliken
+  relativistic                       atomic_zora scalar
+  distributed_hessian                .false.
+  #===============================================================================
+  
+  ################################################################################
+  #
+  #  FHI-aims code project
+  #  VB, Fritz-Haber Institut, 2007
+  #
+  #  Suggested "safe" defaults for C atom (to be pasted into control.in file)
+  #
+  ################################################################################
+    species        C
+  #     global species definitions
+      nucleus             6
+      mass                12.0107
+  #
+      l_hartree           8
+  #
+      cut_pot             4.0  2.0  1.0
+      basis_dep_cutoff    0.d0
+  #
+      radial_base         34 7.0
+      radial_multiplier   2
+      angular_grids specified
+        division   0.4031  110
+        division   0.5191  194
+        division   0.6263  302
+        division   0.8150  434
+        division   0.8501  590
+  #     division   0.9238  770
+  #     division   1.6076  974
+  #     outer_grid  974
+       outer_grid 590
+  ################################################################################
+  #
+  #  Definition of "minimal" basis
+  #
+  ################################################################################
+  #     valence basis states
+      valence      2  s   2.
+      valence      2  p   2.
+  #     ion occupancy
+      ion_occ      2  s   1.
+      ion_occ      2  p   1.
+  ################################################################################
+  #
+  #  Suggested additional basis functions. For production calculations,
+  #  uncomment them one after another (the most important basis functions are
+  #  listed first).
+  #
+  #  Constructed for dimers: 1.0 A, 1.25 A, 1.5 A, 2.0 A, 3.0 A
+  #
+  ################################################################################
+  #  "First tier" - improvements: -1214.57 meV to -155.61 meV
+       hydro 2 p 1.7
+       hydro 3 d 6
+       hydro 2 s 4.9
+  #  "Second tier" - improvements: -67.75 meV to -5.23 meV
+       hydro 4 f 9.8
+       hydro 3 p 5.2
+       hydro 3 s 4.3
+       hydro 5 g 14.4
+       hydro 3 d 6.2
+  #  "Third tier" - improvements: -2.43 meV to -0.60 meV
+  #     hydro 2 p 5.6
+  #     hydro 2 s 1.4
+  #     hydro 3 d 4.9
+  #     hydro 4 f 11.2
+  #  "Fourth tier" - improvements: -0.39 meV to -0.18 meV
+  #     hydro 2 p 2.1
+  #     hydro 5 g 16.4
+  #     hydro 4 d 13.2
+  #     hydro 3 s 13.6
+  #     hydro 4 f 17.6
+  #  Further basis functions - improvements: -0.08 meV and below
+  #     hydro 3 s 2
+  #     hydro 3 p 6
+  #     hydro 4 d 20
+  
+  -----------------------------------------------------------------------
+  Completed first pass over input file control.in .
+  -----------------------------------------------------------------------
+  
+  
+  -----------------------------------------------------------------------
+  Parsing geometry.in (first pass over file, find array dimensions only).
+  The contents of geometry.in will be repeated verbatim below
+  unless switched off by setting 'verbatim_writeout .false.' .
+  in the first line of geometry.in .
+  -----------------------------------------------------------------------
+  
+  #=======================================================
+  # FHI-aims file: /tmp/tmptd_gfjsr/tar/input_files/geometry.in
+  # Created using the Atomic Simulation Environment (ASE)
+  # Fri Sep 26 18:54:13 2025
+  #=======================================================
+  lattice_vector 55.1178296447704241 0.0000000000000000 0.0000000000000000
+  lattice_vector -0.0203590594004563 55.1176515833273015 0.0000000000000000
+  lattice_vector -0.0033368814086998 -0.0007014481419241 3.7532274515249466
+  atom_frac 0.5927601898522719 0.5493081241279930 0.8081628889537008 C
+  atom_frac 0.5855300048699562 0.5621406979897270 0.5012730204335485 C
+  atom_frac 0.6043834185972971 0.5098440560430124 0.5013748794498083 C
+  atom_frac 0.5927606463118861 0.5493090885023425 0.1944951530400580 C
+  atom_frac 0.6017275535488013 0.5243238587459491 0.1946344903956911 C
+  atom_frac 0.6017267548158587 0.5243233147311431 0.8081310083278338 C
+  atom_frac 0.5308362705123588 0.5999179683092506 0.8074462912309192 C
+  atom_frac 0.5165564072362707 0.6034841498959467 0.5005057091013539 C
+  atom_frac 0.5675317578044301 0.5813381224673564 0.5011100964828817 C
+  atom_frac 0.5308363448610053 0.5999174420578598 0.1939185817923922 C
+  atom_frac 0.5551902268048510 0.5893690371980510 0.1941227392383056 C
+  atom_frac 0.5551905899803625 0.5893693228177996 0.8078152241550074 C
+  atom_frac 0.4507491542563176 0.5926400837689584 0.8064401466455784 C
+  atom_frac 0.4379101392468174 0.5854130072714809 0.4994222316220909 C
+  atom_frac 0.4902180461883240 0.6042829215971561 0.5001563095880741 C
+  atom_frac 0.4507492251803467 0.5926402205018132 0.1927808410208113 C
+  atom_frac 0.4757382494511866 0.6016148085544368 0.1932004069071530 C
+  atom_frac 0.4757371941890405 0.6016143586710683 0.8067116082350930 C
+  atom_frac 0.4000397808684276 0.5307546364946908 0.8055543829464054 C
+  atom_frac 0.3964532755529249 0.5164780589537912 0.4987014145046290 C
+  atom_frac 0.4186838310747997 0.5674314840262424 0.4991257744300712 C
+  atom_frac 0.4000406919757230 0.5307537914402183 0.1920129572072714 C
+  atom_frac 0.4106315231139425 0.5550997006089481 0.1921308741289175 C
+  atom_frac 0.4106305628342106 0.5551004696689354 0.8058496778980727 C
+  atom_frac 0.4072326337192864 0.4506733064894085 0.8055033176443943 C
+  atom_frac 0.4144632473023621 0.4378410241178786 0.4987287968214704 C
+  atom_frac 0.3956165814027030 0.4901399233645479 0.4986247620230706 C
+  atom_frac 0.4072336065514827 0.4506738934237814 0.1918371110462992 C
+  atom_frac 0.3982709767668395 0.4756598528942858 0.1918680502118272 C
+  atom_frac 0.3982699991356917 0.4756593071099730 0.8053703392113486 C
+  atom_frac 0.4691671428879606 0.4000799527145418 0.8060782831733535 C
+  atom_frac 0.4834476373620532 0.3965173528413633 0.4994854000279296 C
+  atom_frac 0.4324637984353995 0.4186467006405498 0.4988868866458687 C
+  atom_frac 0.4691665678041017 0.4000805374344329 0.1925515728128639 C
+  atom_frac 0.4448082963137111 0.4106206448445837 0.1921708282261551 C
+  atom_frac 0.4448089347931463 0.4106197505583937 0.8058680878447142 C
+  atom_frac 0.5492583251852285 0.4073466807447258 0.8071892666192163 C
+  atom_frac 0.5621003288460870 0.4145705168827948 0.5005517660134211 C
+  atom_frac 0.5097856216378106 0.3957170784028439 0.4998166128485799 C
+  atom_frac 0.5492587074344081 0.4073483216073374 0.1935312182693808 C
+  atom_frac 0.5242668372427178 0.3983824747290988 0.1932623138001419 C
+  atom_frac 0.5242670164539135 0.3983813173717285 0.8067642669714363 C
+  atom_frac 0.5999662655090195 0.4692287797495444 0.8079618085910995 C
+  atom_frac 0.6035521589892984 0.4835054280104654 0.5012879415393774 C
+  atom_frac 0.5813284334636901 0.4325500815218161 0.5008588913434157 C
+  atom_frac 0.5999664373491996 0.4692293929445163 0.1944376212462721 C
+  atom_frac 0.5893797758371978 0.4448825316849479 0.1941455549065910 C
+  atom_frac 0.5893796627737459 0.4448825938662638 0.8078507463483535 C
+  
+  -----------------------------------------------------------------------
+  Completed first pass over input file geometry.in .
+  -----------------------------------------------------------------------
+  
+
+  Basic array size parameters:
+  | Number of species                 :        1
+  | Number of atoms                   :       48
+  | Number of lattice vectors         :        3
+  | Max. basis fn. angular momentum   :        4
+  | Max. atomic/ionic basis occupied n:        2
+  | Max. number of basis fn. types    :        2
+  | Max. radial fns per species/type  :        8
+  | Max. logarithmic grid size        :     1277
+  | Max. radial integration grid size :       69
+  | Max. angular integration grid size:      590
+  | Max. angular grid division number :        8
+  | Radial grid for Hartree potential :     1277
+  | Number of spin channels           :        1
+
+------------------------------------------------------------
+          Reading file control.in.
+------------------------------------------------------------
+
+  XC: Using HSE-functional with OMEGA =  0.110000E+00 <units>.
+  XC: For the actual units (bohr^-1 or Angstrom^-1), see below.
+  hse_unit: Unit for the HSE06 hybrid functional screening parameter set to bohr^(-1).
+  hybrid_xc_coeff: Mixing coefficient for hybrid-functional exact exchange modified to         0.25000000 .
+  * WARNING: This change modifies the chosen exchange-correlation functional (keyword 'xc')
+  * from its literature definition. Be sure to NEVER include such a line in any default control.in files!
+  Found k-point grid:         1         1        24
+
+  Plot band    1
+  | begin  0.000000  0.000000 -0.500000
+  | end    0.000000  0.000000  0.000000
+  | number of points:   42
+
+  Plot band    2
+  | begin  0.000000  0.000000  0.000000
+  | end    0.000000  0.500000  0.000000
+  | number of points:    3
+
+  Plot band    3
+  | begin  0.000000  0.500000 -0.500000
+  | end    0.000000  0.000000  0.000000
+  | number of points:   42
+
+  Plot band    4
+  | begin  0.000000  0.000000  0.000000
+  | end    0.500000 -0.500000  0.000000
+  | number of points:    4
+
+  Plot band    5
+  | begin  0.500000 -0.500000 -0.500000
+  | end    0.000000  0.000000  0.000000
+  | number of points:   42
+
+  Plot band    6
+  | begin  0.000000  0.000000  0.000000
+  | end    0.500000  0.000000  0.000000
+  | number of points:    3
+
+  Plot band    7
+  | begin  0.500000  0.000000 -0.500000
+  | end    0.000000  0.000000  0.000000
+  | number of points:   42
+  Calculating density of states with
+  | energy interval :-30.000000 30.000000
+  | points & broadening : 10000  0.025000
+  Hirshfeld charge analysis will be performed.
+  Mulliken charge analysis will be performed and summarised to the main output.
+  Full Mulliken charge analysis will be written to file 'Mulliken.out'.
+  Scalar relativistic treatment of kinetic energy: on-site free-atom approximation to ZORA.
+  Full copy of Hessian matrix on each MPI task requested explicitly.
+ 
+  Reading configuration options for species C                   .
+  | Found nuclear charge :   6.0000
+  | Found atomic mass :    12.0107000000000      amu
+  | Found l_max for Hartree potential  :   8
+  | Found cutoff potl. onset [A], width [A], scale factor :    4.00000    2.00000    1.00000
+  | Threshold for basis-dependent cutoff potential is   0.000000E+00
+  | Found data for basic radial integration grid :    34 points, outermost radius =    7.000 A
+  | Found multiplier for basic radial grid :   2
+  | Found angular grid specification: user-specified.
+  | Specified grid contains     6 separate shells.
+  | Check grid settings after all constraints further below.
+  | Found free-atom valence shell :  2 s   2.000
+  | Found free-atom valence shell :  2 p   2.000
+  | No ionic wave fns used. Skipping ion_occ.
+  | No ionic wave fns used. Skipping ion_occ.
+  | Found hydrogenic basis function :  2 p   1.700
+  | Found hydrogenic basis function :  3 d   6.000
+  | Found hydrogenic basis function :  2 s   4.900
+  | Found hydrogenic basis function :  4 f   9.800
+  | Found hydrogenic basis function :  3 p   5.200
+  | Found hydrogenic basis function :  3 s   4.300
+  | Found hydrogenic basis function :  5 g  14.400
+  | Found hydrogenic basis function :  3 d   6.200
+  Species C                   : Missing cutoff potential type.
+  Defaulting to exp(1/x)/(1-x)^2 type cutoff potential.
+  Species C : No 'logarithmic' tag. Using default grid for free atom:
+  | Default logarithmic grid data [bohr] : 0.1000E-03 0.1000E+03 0.1012E+01
+  Species C : On-site basis accuracy parameter (for Gram-Schmidt orthonormalisation) not specified.
+  Using default value basis_acc =  0.1000000E-03.
+  Species C                   : Using default innermost maximum threshold i_radial=  2 for radial functions.
+  Species C                   : Default cutoff onset for free atom density etc. : 0.40000000E+01 AA.
+  Species C                   : Basic radial grid will be enhanced according to radial_multiplier =   2, to contain    69 grid points.
+ 
+  Finished reading input file 'control.in'.
+ 
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+          Reading geometry description geometry.in.
+------------------------------------------------------------
+  | The smallest distance between any two atoms is         1.40844580 AA.
+  | The first atom of this pair is atom number                     44 .
+  | The second atom of this pair is atom number                    46 .
+  | Wigner-Seitz cell of the first atom image           0     0     1 .
+  | (The Wigner-Seitz cell of the second atom is 0 0 0  by definition.)
+
+  Symmetry information by spglib:
+  | Precision set to  0.1E-04
+  | Number of Operations  : 1
+  | Space group           : 1
+  | International         : P1
+  | Schoenflies           : C1^1
+  Input structure read successfully.
+  The structure contains       48 atoms,  and a total of        288.000 electrons.
+
+  Input geometry:
+  | Unit cell:
+  |       55.11782964        0.00000000        0.00000000
+  |       -0.02035906       55.11765158        0.00000000
+  |       -0.00333688       -0.00070145        3.75322745
+  | Atomic structure:
+  |       Atom                x [A]            y [A]            z [A]
+  |    1: Species C            32.65777502       30.27600691        3.03321914
+  |    2: Species C            32.26002572       30.98352352        1.88139166
+  |    3: Species C            33.30024933       28.10105535        1.88177396
+  |    4: Species C            32.65984790       30.27649052        0.72998455
+  |    5: Species C            33.15459258       28.89936324        0.73050751
+  |    6: Species C            33.15250140       28.89890292        3.03309948
+  |    7: Species C            29.24363501       33.06550317        3.03052959
+  |    8: Species C            28.45751156       33.26227803        1.87851177
+  |    9: Species C            31.26761110       32.04164058        1.88078017
+  |   10: Species C            29.24568639       33.06590453        0.72782054
+  |   11: Species C            30.58823358       32.48450108        0.72858679
+  |   12: Species C            30.58620577       32.48408635        3.03191428
+  |   13: Species C            24.82955851       32.66436398        3.02675330
+  |   14: Species C            24.12307148       32.26623985        1.87444523
+  |   15: Species C            27.00578316       33.30630470        1.87720039
+  |   16: Species C            24.83161012       32.66480196        0.72355034
+  |   17: Species C            26.20876679       33.15945989        0.72512507
+  |   18: Species C            26.20666142       33.15900474        3.02777215
+  |   19: Species C            22.03583079       29.25338408        3.02342882
+  |   20: Species C            21.83946499       28.46670789        1.87173984
+  |   21: Species C            23.06372618       31.27514072        1.87333256
+  |   22: Species C            22.03792834       29.25376787        0.72066830
+  |   23: Species C            22.62117591       30.59565712        0.72111087
+  |   24: Species C            22.61907506       30.59526902        3.02453713
+  |   25: Species C            22.43391578       24.83948927        3.02323716
+  |   26: Species C            22.83373643       24.13241918        1.87184261
+  |   27: Species C            21.79388470       27.01501176        1.87145214
+  |   28: Species C            22.43601712       24.83995207        0.72000831
+  |   29: Species C            21.94150762       26.21711946        0.72012443
+  |   30: Species C            21.93940656       26.21665904        3.02273807
+  |   31: Species C            25.84863962       22.05090202        3.02539514
+  |   32: Species C            26.63684507       21.85475494        1.87468232
+  |   33: Species C            23.82627799       23.07447304        1.87243596
+  |   34: Species C            25.85065517       22.05136460        0.72268985
+  |   35: Species C            24.50786680       22.63231084        0.72126083
+  |   36: Species C            24.50585417       22.63183107        3.02460623
+  |   37: Species C            30.26294011       22.45142622        3.02956491
+  |   38: Species C            30.97163962       22.84980220        1.87868463
+  |   39: Species C            28.08855279       21.81064546        1.87592543
+  |   40: Species C            30.26500885       22.45194711        0.72636668
+  |   41: Species C            28.88769464       21.95777088        0.72535742
+  |   42: Species C            28.88565736       21.95727674        3.02796979
+  |   43: Species C            33.05658929       25.86222165        3.03246444
+  |   44: Species C            33.25496863       26.64933209        1.88144766
+  |   45: Species C            32.03108394       23.84079336        1.87983734
+  |   46: Species C            33.05864600       25.86268581        0.72976862
+  |   47: Species C            32.47562885       24.52074419        0.72867243
+  |   48: Species C            32.47357476       24.52031714        3.03204760
+
+  Lattice parameters for 3D lattice (in Angstroms) :    55.117830   55.117655    3.753229
+  Angle(s) between unit vectors (in degrees)       :    90.010689   90.050940   90.021164
+
+
+  Quantities derived from the lattice vectors (in Angstrom^-1):
+  | Reciprocal lattice vector 1:  0.113996  0.000042  0.000101
+  | Reciprocal lattice vector 2: -0.000000  0.113996  0.000021
+  | Reciprocal lattice vector 3: -0.000000 -0.000000  1.674075
+  | Unit cell volume                               :   0.114022E+05  Angstrom^3
+
+  Fractional coordinates:
+                         L1                L2                L3
+       atom_frac         0.59276019        0.54930812        0.80816289  C
+       atom_frac         0.58553000        0.56214070        0.50127302  C
+       atom_frac         0.60438342        0.50984406        0.50137488  C
+       atom_frac         0.59276065        0.54930909        0.19449515  C
+       atom_frac         0.60172755        0.52432386        0.19463449  C
+       atom_frac         0.60172675        0.52432331        0.80813101  C
+       atom_frac         0.53083627        0.59991797        0.80744629  C
+       atom_frac         0.51655641        0.60348415        0.50050571  C
+       atom_frac         0.56753176        0.58133812        0.50111010  C
+       atom_frac         0.53083634        0.59991744        0.19391858  C
+       atom_frac         0.55519023        0.58936904        0.19412274  C
+       atom_frac         0.55519059        0.58936932        0.80781522  C
+       atom_frac         0.45074915        0.59264008        0.80644015  C
+       atom_frac         0.43791014        0.58541301        0.49942223  C
+       atom_frac         0.49021805        0.60428292        0.50015631  C
+       atom_frac         0.45074923        0.59264022        0.19278084  C
+       atom_frac         0.47573825        0.60161481        0.19320041  C
+       atom_frac         0.47573719        0.60161436        0.80671161  C
+       atom_frac         0.40003978        0.53075464        0.80555438  C
+       atom_frac         0.39645328        0.51647806        0.49870141  C
+       atom_frac         0.41868383        0.56743148        0.49912577  C
+       atom_frac         0.40004069        0.53075379        0.19201296  C
+       atom_frac         0.41063152        0.55509970        0.19213087  C
+       atom_frac         0.41063056        0.55510047        0.80584968  C
+       atom_frac         0.40723263        0.45067331        0.80550332  C
+       atom_frac         0.41446325        0.43784102        0.49872880  C
+       atom_frac         0.39561658        0.49013992        0.49862476  C
+       atom_frac         0.40723361        0.45067389        0.19183711  C
+       atom_frac         0.39827098        0.47565985        0.19186805  C
+       atom_frac         0.39827000        0.47565931        0.80537034  C
+       atom_frac         0.46916714        0.40007995        0.80607828  C
+       atom_frac         0.48344764        0.39651735        0.49948540  C
+       atom_frac         0.43246380        0.41864670        0.49888689  C
+       atom_frac         0.46916657        0.40008054        0.19255157  C
+       atom_frac         0.44480830        0.41062064        0.19217083  C
+       atom_frac         0.44480893        0.41061975        0.80586809  C
+       atom_frac         0.54925833        0.40734668        0.80718927  C
+       atom_frac         0.56210033        0.41457052        0.50055177  C
+       atom_frac         0.50978562        0.39571708        0.49981661  C
+       atom_frac         0.54925871        0.40734832        0.19353122  C
+       atom_frac         0.52426684        0.39838247        0.19326231  C
+       atom_frac         0.52426702        0.39838132        0.80676427  C
+       atom_frac         0.59996627        0.46922878        0.80796181  C
+       atom_frac         0.60355216        0.48350543        0.50128794  C
+       atom_frac         0.58132843        0.43255008        0.50085889  C
+       atom_frac         0.59996644        0.46922939        0.19443762  C
+       atom_frac         0.58937978        0.44488253        0.19414555  C
+       atom_frac         0.58937966        0.44488259        0.80785075  C
+
+ 
+  Finished reading input file 'control.in'.
+ 
+
+------------------------------------------------------------
+          Reading geometry description geometry.in.
+------------------------------------------------------------
+ 
+  Consistency checks for stacksize environment parameter are next.
+ 
+  | Maximum stacksize for task 0: unlimited
+  | Maximum stacksize for task 1: unlimited
+  | Maximum stacksize for task 2: unlimited
+  | Maximum stacksize for task 3: unlimited
+  | Maximum stacksize for task 4: unlimited
+  | Maximum stacksize for task 5: unlimited
+  | Maximum stacksize for task 6: unlimited
+  | Maximum stacksize for task 7: unlimited
+  | Maximum stacksize for task 8: unlimited
+  | Maximum stacksize for task 9: unlimited
+  | Maximum stacksize for task 10: unlimited
+  | Maximum stacksize for task 11: unlimited
+  | Maximum stacksize for task 12: unlimited
+  | Maximum stacksize for task 13: unlimited
+  | Maximum stacksize for task 14: unlimited
+  | Maximum stacksize for task 15: unlimited
+  | Maximum stacksize for task 16: unlimited
+  | Maximum stacksize for task 17: unlimited
+  | Maximum stacksize for task 18: unlimited
+  | Maximum stacksize for task 19: unlimited
+  | Maximum stacksize for task 20: unlimited
+  | Maximum stacksize for task 21: unlimited
+  | Maximum stacksize for task 22: unlimited
+  | Maximum stacksize for task 23: unlimited
+  | Maximum stacksize for task 24: unlimited
+  | Maximum stacksize for task 25: unlimited
+  | Maximum stacksize for task 26: unlimited
+  | Maximum stacksize for task 27: unlimited
+  | Maximum stacksize for task 28: unlimited
+  | Maximum stacksize for task 29: unlimited
+  | Maximum stacksize for task 30: unlimited
+  | Maximum stacksize for task 31: unlimited
+  | Maximum stacksize for task 32: unlimited
+  | Maximum stacksize for task 33: unlimited
+  | Maximum stacksize for task 34: unlimited
+  | Maximum stacksize for task 35: unlimited
+  | Maximum stacksize for task 36: unlimited
+  | Maximum stacksize for task 37: unlimited
+  | Maximum stacksize for task 38: unlimited
+  | Maximum stacksize for task 39: unlimited
+  | Maximum stacksize for task 40: unlimited
+  | Maximum stacksize for task 41: unlimited
+  | Maximum stacksize for task 42: unlimited
+  | Maximum stacksize for task 43: unlimited
+  | Current stacksize for task 0: unlimited
+  | Current stacksize for task 1: unlimited
+  | Current stacksize for task 2: unlimited
+  | Current stacksize for task 3: unlimited
+  | Current stacksize for task 4: unlimited
+  | Current stacksize for task 5: unlimited
+  | Current stacksize for task 6: unlimited
+  | Current stacksize for task 7: unlimited
+  | Current stacksize for task 8: unlimited
+  | Current stacksize for task 9: unlimited
+  | Current stacksize for task 10: unlimited
+  | Current stacksize for task 11: unlimited
+  | Current stacksize for task 12: unlimited
+  | Current stacksize for task 13: unlimited
+  | Current stacksize for task 14: unlimited
+  | Current stacksize for task 15: unlimited
+  | Current stacksize for task 16: unlimited
+  | Current stacksize for task 17: unlimited
+  | Current stacksize for task 18: unlimited
+  | Current stacksize for task 19: unlimited
+  | Current stacksize for task 20: unlimited
+  | Current stacksize for task 21: unlimited
+  | Current stacksize for task 22: unlimited
+  | Current stacksize for task 23: unlimited
+  | Current stacksize for task 24: unlimited
+  | Current stacksize for task 25: unlimited
+  | Current stacksize for task 26: unlimited
+  | Current stacksize for task 27: unlimited
+  | Current stacksize for task 28: unlimited
+  | Current stacksize for task 29: unlimited
+  | Current stacksize for task 30: unlimited
+  | Current stacksize for task 31: unlimited
+  | Current stacksize for task 32: unlimited
+  | Current stacksize for task 33: unlimited
+  | Current stacksize for task 34: unlimited
+  | Current stacksize for task 35: unlimited
+  | Current stacksize for task 36: unlimited
+  | Current stacksize for task 37: unlimited
+  | Current stacksize for task 38: unlimited
+  | Current stacksize for task 39: unlimited
+  | Current stacksize for task 40: unlimited
+  | Current stacksize for task 41: unlimited
+  | Current stacksize for task 42: unlimited
+  | Current stacksize for task 43: unlimited
+ 
+  Consistency checks for the contents of control.in are next.
+ 
+  HSE06 screening parameters: omega_HF  =      0.11000000 bohr^-1, and
+                              omega_PBE =      0.11000000 bohr^-1.
+  MPI_IN_PLACE appears to work with this MPI implementation.
+  | Keeping use_mpi_in_place .true. (see manual).
+  Explicit treatment of the Coulomb operator is needed, but the RI method is not specified.
+  Coulomb operator: Defaulting to 'LVL fast' resolution of identity - RI_type = LVL_fast
+  Species C: Using default value for prodbas_acc =   1.000000E-04.
+  Species C: Using default value max_l_prodbas =    20.
+  Target number of points in a grid batch is not set. Defaulting to  100
+  Method for grid partitioning is not set. Defaulting to parallel hash+maxmin partitioning.
+  Batch size limit is not set. Defaulting to    200
+  By default, will store active basis functions for each batch.
+  If in need of memory, prune_basis_once .false. can be used to disable this option.
+  communication_type for Hartree potential was not specified.
+  Defaulting to calc_hartree .
+  Defaulting to Pulay charge density mixer.
+  Pulay mixer: Number of relevant iterations not set.
+  Defaulting to    8 iterations.
+  Pulay mixer: Number of initial linear mixing iterations not set.
+  Defaulting to    0 iterations.
+  Work space size for distributed Hartree potential not set.
+  Defaulting to   0.200000E+03 MB.
+  Mixing parameter for charge density mixing has not been set.
+  Using default: charge_mix_param =     0.0500.
+  The mixing parameter will be adjusted in iteration number     2 of the first full s.c.f. cycle only.
+  Algorithm-dependent basis array size parameters:
+  | n_max_pulay                         :        8
+  Maximum number of self-consistency iterations not provided.
+  Presetting  1000 iterations.
+  Presetting      1001 iterations before the initial mixing cycle
+  is restarted anyway using the sc_init_iter criterion / keyword.
+  Presetting a factor      1.000 between actual scf density residual
+  and density convergence criterion sc_accuracy_rho below which sc_init_iter
+  takes no effect.
+ * No s.c.f. convergence criteria (sc_accuracy_*) were provided in control.in.
+ * The run will proceed with a reasonable default guess, but please check whether.
+ * the s.c.f. cycles seem to take too much or too little time.
+  Calculation of forces was not defined in control.in. No forces will be calculated.
+  Geometry relaxation not requested: no relaxation will be performed.
+ * Notice: The s.c.f. convergence criterion sc_accuracy_rho was not provided.
+ * We used to stop in this case, and ask the user to provide reasonable
+ * scf convergence criteria. However, this led some users to employ criteria
+ * that led to extremely long run times, e.g., for simple relaxation.
+ * We now preset a default value for sc_accuracy_rho if it is not set.
+ * You may still wish to check if this setting is too tight or too loose for your needs.
+ * Based on n_atoms and forces and force-correction status, FHI-aims chose sc_accuracy_rho =  0.282843E-05 .
+  No accuracy limit for integral partition fn. given. Defaulting to  0.1000E-14.
+  No threshold value for u(r) in integrations given. Defaulting to  0.1000E-05.
+  No occupation type (smearing scheme) given. Defaulting to Gaussian broadening, width =  0.1000E-01 eV.
+  The width will be adjusted in iteration number     2 of the first full s.c.f. cycle only.
+  S.C.F. convergence parameters will be adjusted in iteration number     2 of the first full s.c.f. cycle only.
+  No accuracy for occupation numbers given. Defaulting to  0.1000E-12.
+  No threshold value for occupation numbers given. Defaulting to  0.0000E+00.
+  No accuracy for fermi level given. Defaulting to  0.1000E-19.
+  Maximum # of iterations to find E_F not set. Defaulting to  200.
+  Preferred method for the eigenvalue solver ('KS_method') not specified in 'control.in'.
+  Calling BLACS routine to test compilation state
+  Since ScaLAPACK support is enabled, defaulting to ELPA (via ELSI).
+  Will not use alltoall communication since running on < 1024 CPUs.
+  Threshold for basis singularities not set.
+  Default threshold for basis singularities:  0.1000E-04
+  partition_type (choice of integration weights) for integrals was not specified.
+  | Using a version of the partition function of Stratmann and coworkers ('stratmann_sparse').
+  | At each grid point, the set of atoms used to build the partition table is smoothly restricted to
+  | only those atoms whose free-atom density would be non-zero at that grid point.
+  Partitioning for Hartree potential was not defined. Using partition_type for integrals.
+  | Adjusted default value of keyword multip_moments_threshold to:       0.10000000E-11
+  | This value may affect high angular momentum components of the Hartree potential in periodic systems.
+  Spin handling was not defined in control.in. Defaulting to unpolarized case.
+  Threshold for auxiliary basis singularities not set.
+  Default threshold for auxiliary basis singularities:  0.1000E-04
+  No q(lm)/r^(l+1) cutoff set for long-range Hartree potential.
+  | Using default value of  0.100000E-09 .
+  | Verify using the multipole_threshold keyword.
+  Defaulting to new monopole extrapolation.
+  Density update method: automatic selection selected.
+  Using density matrix based charge density update.
+  Using density matrix based charge density update.
+  Using packed matrix style: index .
+ * NOTE: You are attempting to run a periodic structure with an exchange treatment
+ * which requires a two-electron Coulomb operator (Hartree-Fock or a hybrid functional).
+ * The present implementation is reliable to our knowledge, but some things
+ * (like band structure output, or perhaps the auxilary basis set for small
+ * orbital basis sets - see the "for_aux" keyword) require extra care.
+ * Please let us know if you encounter any trouble.
+  Coulomb operator: Defaulting to screening threshold for four-center integrals:   0.100000E-06
+  Coulomb operator: Defaulting to screening threshold for Coulomb matrix:   0.100000E-09
+  Fock matrix calculation: Setting the screening threshold for overlap matrix to coul_mat_threshold:   0.100000E-09
+  Coulomb operator: Defaulting to 'LVL_fast' resolution of identity - RI_type = LVL_fast 
+  No other resolution of identity version is supported for periodic boundary conditions at present.
+  Coulomb operator: Defaulting to logarithmic spherical Bessel transform integrals (use_logsbt .true.).
+  HSE with LVL_fast: Also defaulting to logarithmic spherical Bessel transform integrals.
+  Defaulting to use full k-point grid (no symmetry reduction).
+  Charge integration errors on the 3D integration grid will be compensated
+  by explicit normalization and distribution of residual charges.
+  Use the "compensate_multipole_errors" flag to change this behaviour.
+  LVL not implemented with density matrix yet
+  -> switching to transformed overlap
+  LVL probably works better with logsbt
+  Default to 1D ("use_logsbt") integrations for auxiliary 2-center integrals.
+  Default onset of logarithmic r-grid for SBT is -38.000000000000
+  Default onset of logarithmic k-grid for SBT is -25.000000000000
+  Default range of logarithmic r- and k-grid for SBT is  45.000000000000
+  Default number of logarithmic r- and k-grid for SBT is   4096
+  * Use logSBT for radial HSE integration, too
+  Default of use_2d_corr is to use the efficient 2D distribution where possible
+ 
+ * Error. Band structure and exact exchange are requested at the same time,
+ * but the keyword 'exx_band_structure_version' is not set.
+ * We require that this keyword be set explicitly to make sure that our
+ * users understand a specific aspect of the current band structure
+ * calculation framework for hybrid density functionals with FHI-aims.
+ * This has been used successfully by many groups for published work,
+ * but please be sure to understand the current usage. 
+ * 
+ * There are two variants of the band structure calculation for hybrid
+ * density functionals: 
+ * 
+ * --- exx_band_structure_version 1 :
+ *     This version is evaluated in a real-space formalism. It is fast
+ *     and the preferred version. HOWEVER, it does require a sufficiently
+ *     dense 'k_grid' to be used for the preceding s.c.f. cycle.
+ *     If the 'k_grid used for s.c.f. is NOT dense enough, the real-
+ *     space approach will produce bands that are OBVIOUSLY incorrect.
+ *     You cannot miss this - they won't look 'slightly' correct. In
+ *     that case, please try to increase the 'k_grid' parameters used
+ *     for the s.c.f. cycle. In particular, please avoid k_grid dimensions 
+ *     of '1' (one) in any dimension. We apologize for this inconvenience.
+ *     On the bright side, if you use exx_band_structure_version 1 
+ *     correctly, it will give reliable results without much overhead.
+ * 
+ * --- exx_band_structure_version 2 : 
+ *     This version is evaluated completely in reciprocal space and does
+ *     not have any problems with sparse s.c.f. 'k_grid' settings. 
+ *     HOWEVER: exx_band_structure_version 2 is computationally VERY expensive.
+ *     Please only use it for verification and/or if, for some reason, you
+ *     cannot make exx_band_structure_version 1 work at all. The time and memory
+ *     demand of exx_band_structure_version 2 is very significant.
+ *     Ideally, at least work with a low number of k-points within band segments,
+ *     for example, 11 or less.
+ *** read_control:
+ 

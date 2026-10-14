@@ -5,9 +5,9 @@
 # 
 lattice_vector      3.65747405     -0.00000001     -0.00000085
 lattice_vector      0.00000001      4.84465466      0.00000003
-  constrain_relaxation .true.
+ # constrain_relaxation .true.
 lattice_vector      0.00000000      0.00000000     40.26250673
-  constrain_relaxation .true.
+  #constrain_relaxation .true.
 atom_frac       0.80456115      0.84409448      0.49999911 C
 atom_frac       0.19541677      0.15590609      0.49999911 C
 atom_frac       0.80456115      0.15590609      0.49999911 C

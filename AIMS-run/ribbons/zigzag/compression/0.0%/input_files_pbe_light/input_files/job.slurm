@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#SBATCH -n 48
-#SBATCH --job-name BPN_NT_zigzag
-#SBATCH --nodes 1
-#SBATCH --partition par48-x
+#SBATCH -n 90
+#SBATCH --job-name BPN_NR_zigzag
+#SBATCH --nodes 2
+#SBATCH --partition par480-x
 #SBATCH -o out.txt
 #SBATCH -e err.txt
 
