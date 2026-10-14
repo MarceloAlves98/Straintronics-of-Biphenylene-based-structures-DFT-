@@ -202,7 +202,7 @@ This notebook generates the following Figures:
 </p>
 
 <p align="center">
-  <em>Figure 1. Strain on armchair nanotube.</em>
+  <em>Figure 1. Strain on armchair nanotube, with band gap opening.</em>
 </p>
 
 <p align="center">
@@ -227,7 +227,7 @@ This notebook generates the following Figures:
 </p>
 
 <p align="center">
-  <em>Figure 1. Compression on zigzag nanotube.</em>
+  <em>Figure 1. Compression on zigzag nanotube, with observed possible transition into semimetal.</em>
 </p>
 
 4.5-Strain and compression for Armchair ribbon:
@@ -236,7 +236,7 @@ This notebook generates the following Figures:
 </p>
 
 <p align="center">
-  <em>Figure 1. Strain on armchair nanoribbon.</em>
+  <em>Figure 1. Strain on armchair nanoribbon, with observed band gap opening.</em>
 </p>
 
 <p align="center">
@@ -261,7 +261,7 @@ This notebook generates the following Figures:
 </p>
 
 <p align="center">
-  <em>Figure 1. Compression on zigzag ribbon.</em>
+  <em>Figure 1. Compression on zigzag ribbon, with observed band gap opening.</em>
 </p>
 
 5-Dimensionality reduction effects (Comparisson):
